@@ -10,16 +10,24 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:laravel-easy-localize.helloWorld"
+    "onCommand:laravel-easy-localize.localize"
   ],
   "main": "./dist/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "laravel-easy-localize.helloWorld",
-        "title": "Hello World"
+        "command": "laravel-easy-localize.localize",
+        "title": "Laravel Localize"
       }
-    ]
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "when": "editorHasSelection && resourceLangId == blade || resourceLangId == php",
+          "command": "laravel-easy-localize.localize"
+        }
+      ]
+    }
   },
   "scripts": {
     "vscode:prepublish": "npm run package",
