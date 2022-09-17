@@ -7,15 +7,14 @@ import * as fs from 'node:fs';
 // the extension is activated the very first time the command is executed
 export function activate(context: vscode.ExtensionContext) {
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
 	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "laravel-easy-localize" is now active!');
+	console.log('extension "laravel-easy-localize" is now active!');
 
 	// The command has been defined in the package.json file
 	// implementation of the command with registerCommand
 	// The commandId parameter matches the command field in package.json
 	let disposable = vscode.commands.registerCommand('laravel-easy-localize.localize', async () => {
-		// The code you place here will be executed every time the registered command is executed
+		// The code here will be executed every time the registered command is executed
 
 		// get the localize of the first workspace folder.
 		const wsPath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
@@ -41,7 +40,7 @@ export function activate(context: vscode.ExtensionContext) {
 
 					if (addNewTranslation(fileContent, localizeFilePath, arrayKey, word)) {
 
-						const directive = getTranslationDirective(arrayKey);
+						const directive = getLocalizationDirective(arrayKey);
 	
 						editor.edit(editBuilder => {
 							editBuilder.replace(selection, directive);
@@ -66,11 +65,11 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(disposable);
 }
 
-// Get translation array key from user
+// get localization array key from user
 async function getArrayKeyInputFromUser(): Promise<string | undefined> {
 	const result = await vscode.window.showInputBox({
 		value: '',
-		placeHolder: 'Localization Key, For example: welcome_heading',
+		placeHolder: 'Localization Key, For example: welcome_header',
 		ignoreFocusOut: true,
 		validateInput: text => {
 			return text ? null : 'array key is required !';
@@ -123,7 +122,7 @@ function readFileContent(localizeFilePath: string): Array<string> {
 	}
 }
 
-// add new translation key to '/resources/ar/localize.php' 
+// add new localization key to '/resources/ar/localize.php' 
 function addNewTranslation(content: Array<string>, localizeFilePath: string, arrayKey: string | undefined, arrayValue: string): boolean {
 
 	const result = content + `\t'${arrayKey}' => '${arrayValue}',`;
@@ -142,7 +141,7 @@ function addNewTranslation(content: Array<string>, localizeFilePath: string, arr
 }
 
 // get the blade directive/php method to output after translation
-function getTranslationDirective(arrayKey: string | undefined): string {
+function getLocalizationDirective(arrayKey: string | undefined): string {
 
 	const currentFileType = vscode.window.activeTextEditor?.document.languageId;
 	
@@ -153,7 +152,7 @@ function getTranslationDirective(arrayKey: string | undefined): string {
 	return `__('localize.${arrayKey}')`;
 }
 
-// check if translation array key already exists
+// check if localization array key already exists
 function keyExists(array: Array<string>, key: string = ''): boolean {
 
 	if (key && array.find(k => k.includes(`${key}`))) {
