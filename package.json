@@ -3,7 +3,7 @@
   "displayName": "Laravel Easy Localize",
   "description": "Easily localize any blade/php text in any laravel project.",
   "version": "1.0.0",
-  "publisher": "ms-vscode",
+  "publisher": "moatazHajres",
   "engines": {
     "vscode": "^1.71.0"
   },
