@@ -17,15 +17,18 @@ export function activate(context: vscode.ExtensionContext) {
 	let disposable = vscode.commands.registerCommand('laravel-easy-localize.localize', async () => {
 		// The code you place here will be executed every time the registered command is executed
 
-		// gets the localize of the first workspace folder
+		// get the localize of the first workspace folder.
 		const wsPath = vscode.workspace.workspaceFolders?.[0].uri.fsPath;
-		const editor = vscode.window.activeTextEditor;
+		// get the current active editor.
+	 	const editor = vscode.window.activeTextEditor;
 
 		if (editor) {
+			// get the document object associated with text editor.
 			const document = editor.document;
+			// get user's text selection object.
 			const selection = editor.selection;
 
-			// Get the word within the selection
+			// get the text within the selection object.
 			const word = document.getText(selection);
 
 			if (word) {
