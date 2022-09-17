@@ -1,7 +1,7 @@
 {
   "name": "laravel-easy-localize",
   "displayName": "Laravel Easy Localize",
-  "description": "Easily localize any blade/php text in any laravel project with one click.",
+  "description": "Easily localize any blade/php text in any laravel project.",
   "version": "1.0.0",
   "publisher": "ms-vscode",
   "engines": {
