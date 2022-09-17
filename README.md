@@ -4,7 +4,7 @@
     <img src="./resources/logo_icon.png" width="100" height="100">
   </a>
   <br>
-    Laravel Eazy Localize
+    Laravel Easy Localize
   <br>
 </h1>
 
@@ -15,7 +15,7 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
 ## Features
 
 - Custom array key for each translation.
-- Auto detect dublicated array keys.
+- Auto detect duplicated array keys.
 - Auto detect current file type to replace selection with the proper directive/method.
 - Auto creation of lang/ar/localize.php directory if doesn't exists (arabic localization by default, but localize.php can be re-used).
 - Auto detect invalid localize.php & auto fix without losing content.
