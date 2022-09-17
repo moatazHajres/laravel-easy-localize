@@ -2,13 +2,25 @@
   "name": "laravel-easy-localize",
   "displayName": "Laravel Easy Localize",
   "description": "Easily localize any blade/php text in any laravel project with one click.",
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "publisher": "ms-vscode",
   "engines": {
     "vscode": "^1.71.0"
   },
+  "author": {
+    "name": "Moataz Hajres"
+  },
+  "icon": "resources/logo_icon.png",
   "categories": [
+    "Snippets",
+    "Formatters",
     "Other"
   ],
+  "keywords": ["laravel", "localization", "translation", "vscode-extension", "easy"],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/moatazHajres/laravel-easy-localize.git"
+  },
   "activationEvents": [
     "onCommand:laravel-easy-localize.localize"
   ],
