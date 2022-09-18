@@ -31,7 +31,7 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
 - Auto detect duplicated array keys.
 - Auto detect current file type to replace selection with the proper directive/method.
 - Auto creation of lang/ar/localize.php directory if doesn't exists (arabic localization by default, but localize.php can be re-used).
-- Auto detect invalid localize.php & auto recreate file.
+- Auto detect invalid localize.php & auto re-create the file.
 
 ## Usage
 
@@ -52,3 +52,6 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
 ### 1.0.1
 
 - Fixed 'undefined' array key bug.
+### 1.0.2
+
+- Edited README md.
