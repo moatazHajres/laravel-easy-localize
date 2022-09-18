@@ -48,3 +48,7 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
 ### 1.0.0
 
 Initial release.
+
+### 1.0.1
+
+- Fixed 'undefined' array key bug.
