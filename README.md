@@ -15,13 +15,13 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
   <a href="https://marketplace.visualstudio.com/items?itemName=moatazHajres.laravel-easy-localize">
     <img src="https://badgen.net/vs-marketplace/v/moatazHajres.laravel-easy-localize" alt="Version">
   </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=moatazHajres.laravel-easy-localize">
+    <img src="https://badgen.net/vs-marketplace/i/moatazHajres.laravel-easy-localize" alt="Installs">
+  </a>
   <!---
-    <a href="https://marketplace.visualstudio.com/items?itemName=moatazHajres.laravel-easy-localize">
-      <img src="https://badgen.net/vs-marketplace/i/moatazHajres.laravel-easy-localize" alt="Installs">
-    </a>
-    <a href="https://marketplace.visualstudio.com/items?itemName=moatazHajres.laravel-easy-localize">
-      <img src="https://badgen.net/vs-marketplace/rating/moatazHajres.laravel-easy-localize" alt="Ratings">
-    </a>
+  <a href="https://marketplace.visualstudio.com/items?itemName=moatazHajres.laravel-easy-localize">
+    <img src="https://badgen.net/vs-marketplace/rating/moatazHajres.laravel-easy-localize" alt="Ratings">
+  </a>
   -->
 </p>
 
