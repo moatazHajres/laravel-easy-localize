@@ -36,22 +36,24 @@ export function activate(context: vscode.ExtensionContext) {
 				const localizeFilePath = prepareFileDir(wsPath);
 				const fileContent = readFileContent(localizeFilePath);
 
-				if (!keyExists(fileContent, arrayKey)) {
-
-					if (addNewTranslation(fileContent, localizeFilePath, arrayKey, word)) {
-
-						const directive = getLocalizationDirective(arrayKey);
+				if (arrayKey) {
+					if (!keyExists(fileContent, arrayKey)) {
 	
-						editor.edit(editBuilder => {
-							editBuilder.replace(selection, directive);
-						});
-						
-						vscode.window.showInformationMessage('Translation Added !');
-
-						const saved = await document.save();
+						if (addNewTranslation(fileContent, localizeFilePath, arrayKey, word)) {
 	
-						if (!saved) {
-							vscode.window.showInformationMessage("couldn't save localize.php file.");
+							const directive = getLocalizationDirective(arrayKey);
+		
+							editor.edit(editBuilder => {
+								editBuilder.replace(selection, directive);
+							});
+							
+							vscode.window.showInformationMessage('Translation Added !');
+	
+							const saved = await document.save();
+		
+							if (!saved) {
+								vscode.window.showInformationMessage("couldn't save localize.php file.");
+							}
 						}
 					}
 				}
