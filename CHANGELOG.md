@@ -11,3 +11,6 @@ All notable changes to the "laravel-easy-localize" extension will be documented 
 ## [1.0.2]
 
 - Edited README md.
+## [1.1.2]
+
+- Added extension settings to specify Lang folder name & target translation file name.

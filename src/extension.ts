@@ -85,8 +85,9 @@ async function getArrayKeyInputFromUser(): Promise<string | undefined> {
 // make '/resources/ar/localize.php' directory if doesn't exists & open file for appending
 function prepareFileDir(wsPath: string | undefined): string {
 
-	const arabicDir = wsPath + "\\resources\\lang\\ar";
-	const localizeFilePath = arabicDir + "\\localize.php";
+	const configs = vscode.workspace.getConfiguration('laravel-easy-localize');
+	const arabicDir = wsPath + `\\resources\\lang\\${configs.get('languageFolder')}`;
+	const localizeFilePath = arabicDir + `\\${configs.get('targetFileName')}.php`;
 
 	try {
 		fs.mkdirSync(arabicDir, { recursive: true });
@@ -146,12 +147,13 @@ function addNewTranslation(content: Array<string>, localizeFilePath: string, arr
 function getLocalizationDirective(arrayKey: string | undefined): string {
 
 	const currentFileType = vscode.window.activeTextEditor?.document.languageId;
+	const configs = vscode.workspace.getConfiguration('laravel-easy-localize');
 	
 	if (currentFileType === 'blade') {
-		return `@lang('localize.${arrayKey}')`;
+		return `@lang('${configs.get('targetFileName')}.${arrayKey}')`;
 	}
 
-	return `__('localize.${arrayKey}')`;
+	return `__('${configs.get('targetFileName')}.${arrayKey}')`;
 }
 
 // check if localization array key already exists

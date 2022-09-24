@@ -2,7 +2,7 @@
   "name": "laravel-easy-localize",
   "displayName": "Laravel Easy Localize",
   "description": "Easily localize any blade/php text in any laravel project.",
-  "version": "1.0.2",
+  "version": "1.1.2",
   "publisher": "moatazHajres",
   "engines": {
     "vscode": "^1.71.0"
@@ -39,6 +39,21 @@
           "command": "laravel-easy-localize.localize"
         }
       ]
+    },
+    "configuration": {
+      "title": "Laravel Easy Localize",
+      "properties": {
+        "laravel-easy-localize.languageFolder": {
+          "type": "string",
+          "default": "ar",
+          "description": "Lang Directory Folder to save translations to (ex: ar, en, fr ...)"
+        },
+        "laravel-easy-localize.targetFileName": {
+          "type": "string",
+          "default": "localize",
+          "description": "Target Translation file name."
+        }
+      }
     }
   },
   "scripts": {
