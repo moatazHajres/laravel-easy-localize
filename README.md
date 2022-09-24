@@ -37,9 +37,16 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
 
 ![demo](./resources/demo.gif)
 
+## Settings
+
+You may configure the following settings (`Settigs` -> `Extensions` -> `Laravel Eazy Localize`): 
+
+* `Language Folder`: Lang Directory Folder to save translations to (`ar` by default).
+* `Target File Name`: Target Translation file name (`localize` by default).
+
 ## Current Limitations & Future Work
 
-- It only reads & writes to /resources/lang/ar/localize.php file, cannot select custom location.
+- ~~It only reads & writes to /resources/lang/ar/localize.php file, cannot select custom location~~ ✅.
 - No support for nested array keys (ex: key1.key2).
 - you tell me.
 
@@ -52,6 +59,11 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
 ### 1.0.1
 
 - Fixed 'undefined' array key bug.
+
 ### 1.0.2
 
 - Edited README md.
+
+### 1.1.2
+
+- Added extension settings to specify Lang folder name & target translation file name.
