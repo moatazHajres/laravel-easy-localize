@@ -18,11 +18,9 @@ a VS Code Extension for Easily Localize any blade/php text in any Laravel projec
   <a href="https://marketplace.visualstudio.com/items?itemName=moatazHajres.laravel-easy-localize">
     <img src="https://badgen.net/vs-marketplace/i/moatazHajres.laravel-easy-localize" alt="Installs">
   </a>
-  <!---
   <a href="https://marketplace.visualstudio.com/items?itemName=moatazHajres.laravel-easy-localize">
     <img src="https://badgen.net/vs-marketplace/rating/moatazHajres.laravel-easy-localize" alt="Ratings">
   </a>
-  -->
 </p>
 
 ## Features
@@ -48,6 +46,8 @@ You may configure the following settings (`Settigs` -> `Extensions` -> `Laravel 
 
 - ~~It only reads & writes to /resources/lang/ar/localize.php file, cannot select custom location~~ ✅.
 - No support for nested array keys (ex: key1.key2).
+- maybe replace .php lang files with JSON lang files which will help make lang file validation more accurate + easier to parse & write to.
+- prompt to user to select which lang file to write to with default option available if none is selected.  
 - you tell me.
 
 ## Release Notes
